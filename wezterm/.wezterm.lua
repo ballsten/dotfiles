@@ -33,5 +33,10 @@ config.window_background_opacity = 1.0
 
 config.default_domain = 'WSL:Ubuntu'
 
+-- key configs
+config.keys = {
+	{ key = 'l', mods = 'CTRL|SHIFT|ALT', action = wezterm.action.ShowLauncher },
+}
+
 -- and finally, return the configuration to wezterm
 return config
