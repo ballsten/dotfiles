@@ -20,3 +20,9 @@ if ((Test-Admin) -eq $false)  {
 'installing wezterm config'
 Remove-Item ~/.wezterm.lua
 New-Item -Path ~/.wezterm.lua -ItemType HardLink -Value $PSScriptRoot/wezterm/.wezterm.lua
+
+# create link for NeoVim config
+'installing NeoVim config'
+New-Item -ItemType Directory ~/AppData/Local/nvim/
+Remove-Item ~/AppData/Local/nvim/init.lua
+New-Item -Path ~/AppData/Local/nvim/init.lua -ItemType HardLink -Value $PSScriptRoot/nvim/init.lua
