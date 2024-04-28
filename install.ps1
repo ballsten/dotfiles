@@ -23,6 +23,5 @@ New-Item -Path ~/.wezterm.lua -ItemType HardLink -Value $PSScriptRoot/wezterm/.w
 
 # create link for NeoVim config
 'installing NeoVim config'
-New-Item -ItemType Directory ~/AppData/Local/nvim/
-Remove-Item ~/AppData/Local/nvim/init.lua
-New-Item -Path ~/AppData/Local/nvim/init.lua -ItemType HardLink -Value $PSScriptRoot/nvim/init.lua
+Remove-Item ~/AppData/Local/nvim/
+New-Item -Path ~/AppData/Local/nvim -ItemType Junction -Value $PSScriptRoot/nvim
