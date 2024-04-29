@@ -19,17 +19,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
--- configure plugins
-local plugins = {
-  { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
-  {
-    'nvim-telescope/telescope.nvim', tag = '0.1.6',
-    dependencies = { 'nvim-lua/plenary.nvim' }
-  },
-  {{"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"}}
-}
-local opts = {}
-require("lazy").setup(plugins, opts)
+require("lazy").setup("plugins")
 
 -- configure catppuccin colour scheme
 require("catppuccin").setup()
@@ -50,3 +40,6 @@ configs.setup({
   highlight = { enable = true },
   indent = { enable = true },  
 })
+
+-- configure Neotree
+vim.keymap.set('n', '<leader>fe', ':Neotree filesystem reveal left<CR>')
