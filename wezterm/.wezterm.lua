@@ -22,7 +22,8 @@ config.launch_menu = launch_menu
 -- For example, changing the color scheme:
 --config.color_scheme = 'Sweet Love (terminal.sexy)'
 --config.color_scheme = 'Summerfruit Light (base16)'
-config.color_scheme = 'Tokyo Night'
+-- config.color_scheme = 'Tokyo Night'
+config.color_scheme = 'Catppuccin Mocha'
 
 config.font = wezterm.font 'FiraCode Nerd Font Mono'
 
