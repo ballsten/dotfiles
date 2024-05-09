@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-         ensure_installed = { "lua_ls", "pyright" }
+         ensure_installed = { "lua_ls", "pyright", "docker_compose_language_service" }
       })
     end
   },
@@ -21,11 +21,11 @@ return {
 
       local lspconfig = require("lspconfig")
       lspconfig.lua_ls.setup({
-        capabilities = capabilities 
+        capabilities = capabilities
       })
-      
+
       lspconfig.pyright.setup({
-        capabilities = capabilities 
+        capabilities = capabilities
       })
 
       vim.keymap.set('n','K', vim.lsp.buf.hover, {})
