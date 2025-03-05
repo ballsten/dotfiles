@@ -25,3 +25,8 @@ New-Item -Path ~/.wezterm.lua -ItemType HardLink -Value $PSScriptRoot/wezterm/.w
 'installing NeoVim config'
 Remove-Item ~/AppData/Local/nvim/
 New-Item -Path ~/AppData/Local/nvim -ItemType Junction -Value $PSScriptRoot/nvim
+
+# create link for Starship config
+'installing starship config'
+Remove-Item ~/.config/starship.toml
+New-Item -Path ~/.config/starship.toml -ItemType HardLink -Value $PSScriptRoot/starship.toml
