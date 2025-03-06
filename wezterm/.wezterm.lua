@@ -34,6 +34,9 @@ config.window_background_opacity = 1.0
 
 config.default_domain = 'WSL:Ubuntu'
 
+-- disable the bell
+config.audible_bell = "Disabled"
+
 -- key configs
 config.keys = {
 	{ key = 'l', mods = 'CTRL|SHIFT|ALT', action = wezterm.action.ShowLauncher },
